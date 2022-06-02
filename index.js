@@ -18,8 +18,11 @@
       id : "pull-weeds"
     }
   ];
-  let updatePrice;
+  let selectedPrice;
+  let selectedService;
+  let updatedPrice;
   let updateService;
+
 
   // grab buttons
   const buttonCar = document.getElementById("car-wash");
@@ -35,7 +38,8 @@
     let targetId = event.target.id;
     console.log(targetId)
 
-    retrievePriceAndService(targetId, servicesAvailable)
+    retrievePriceAndService(targetId, servicesAvailable);
+
   })
 
 // tell which button was pushed(done with listener)
@@ -54,7 +58,11 @@ function retrievePriceAndService (id, arr) {
 }
 
 // update array for servicesRequested
-function updateServicesRequested(price, service) {
+function updatePricesRequested(price) {
+  
+}
+
+function updateServicesRequested(service) {
 
 }
 // update display with array contents
