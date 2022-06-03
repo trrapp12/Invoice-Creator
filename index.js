@@ -31,7 +31,9 @@
   const buttonLawn = document.getElementById("lawn-mowed");
   const buttonWeeds = document.getElementById("pull-weeds");
 
-  const buttonContainer = document.getElementById('button-container')
+  // grab containers
+  const buttonContainer = document.getElementById('button-container');
+  const priceContainer = document.getElementById('display-price')
 
   // get display area
   const displayArea = document.getElementById('display')
@@ -42,8 +44,7 @@
 
     retrievePriceAndService(targetId, servicesAvailable);
     pushToArray(selectedService, servicesRequested);
-    displayPricesRequested(selectedPrice);
-    displayServicesRequested(selectedService);
+    displayTotalPrice();
   })
 
 // tell which button was pushed(done with listener)
@@ -73,6 +74,8 @@ function pushToArray (service, arr) {
   } else {
     arr.push(service);
     updatePrice(selectedPrice)
+    displayPricesRequested(selectedPrice);
+    displayServicesRequested(selectedService);
     console.log(servicesRequested)
   }
 
@@ -84,14 +87,20 @@ function updatePrice (price) {
 }
 // update display with array contents
 function displayPricesRequested(price) {
-  displayArea.innerHTML = `
+  displayArea.innerHTML += `
     <h1> Price: ${price}</h1>
   `
 }
 
 function displayServicesRequested(service) {
-  displayArea.innerHTML = `
+  displayArea.innerHTML += `
     <h1> Service: ${service}</h1>
+  `
+}
+
+function displayTotalPrice () {
+  priceContainer.innerHTML = `
+    <h1>Grand Total: ${priceTotal}</h1>
   `
 }
 // remove contents from array
