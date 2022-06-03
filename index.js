@@ -32,7 +32,7 @@
   const buttonWeeds = document.getElementById("pull-weeds");
 
   // grab containers
-  const buttonContainer = document.getElementById('button-container');
+  const buttonContainer = document.getElementById('container-button');
   const priceContainer = document.getElementById('display-price')
 
   // get display area
@@ -88,29 +88,24 @@ function updatePrice (price) {
 // update display with array contents
 function displayPricesRequested(price) {
   displayArea.innerHTML += `
-    <h1> Price: ${price}</h1>
+    <h2> Price: ${price}</h2>
   `
 }
 
 function displayServicesRequested(service) {
   displayArea.innerHTML += `
-    <h1> Service: ${service}</h1>
+    <h2> Service: ${service}</h2>
   `
 }
 
 function displayTotalPrice () {
   priceContainer.innerHTML = `
-    <h1>Grand Total: ${priceTotal}</h1>
+    <h2>Grand Total: ${priceTotal}</h2>
   `
 }
 // remove contents from array
 
 // update display
-
-
-
-
-
 
   })
 })()

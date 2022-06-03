@@ -5,3 +5,63 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.button-service {
+
+}
+
+.container-button {
+
+}
+
+.container-display {
+
+}
+
+.container-master {
+
+}
+
+.container-head {
+
+}
+
+.container-submit {
+
+}
+
+.display {
+
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.price {
+
+}
+
+.submit {
+
+}
