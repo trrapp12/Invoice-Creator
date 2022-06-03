@@ -1,6 +1,8 @@
 (() => {
-  // create variables
-  const servicesRequested = [];
+  window.addEventListener('load', () => {
+    // create variables
+  let servicesRequested = [];
+  let priceTotal = 0;
   const servicesAvailable = [
     {
       service: 'Car Wash',
@@ -39,8 +41,9 @@
     console.log(targetId)
 
     retrievePriceAndService(targetId, servicesAvailable);
+    pushToArray(selectedService, servicesRequested);
     displayPricesRequested(selectedPrice);
-    displayServicesRequested(selectedService)
+    displayServicesRequested(selectedService);
   })
 
 // tell which button was pushed(done with listener)
@@ -57,8 +60,29 @@ function retrievePriceAndService (id, arr) {
     }
   }
 }
+// initial zeroed balance and array
 
+function initializeInvoice() {
+  servicesRequested = [];
+  priceTotal = 0;
+}
 // update array for servicesRequested
+function pushToArray (service, arr) {
+  if (arr.includes(service)) {
+    console.log('service already included in the list')
+  } else {
+    arr.push(service);
+    updatePrice(selectedPrice)
+    console.log(servicesRequested)
+  }
+
+}
+
+function updatePrice (price) {
+    priceTotal += price;
+    console.log(priceTotal)
+}
+// update display with array contents
 function displayPricesRequested(price) {
   displayArea.innerHTML = `
     <h1> Price: ${price}</h1>
@@ -70,8 +94,6 @@ function displayServicesRequested(service) {
     <h1> Service: ${service}</h1>
   `
 }
-// update display with array contents
-
 // remove contents from array
 
 // update display
@@ -81,4 +103,5 @@ function displayServicesRequested(service) {
 
 
 
+  })
 })()
