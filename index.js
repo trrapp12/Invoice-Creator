@@ -39,7 +39,8 @@
     console.log(targetId)
 
     retrievePriceAndService(targetId, servicesAvailable);
-
+    displayPricesRequested(selectedPrice);
+    displayServicesRequested(selectedService)
   })
 
 // tell which button was pushed(done with listener)
@@ -48,8 +49,8 @@
 function retrievePriceAndService (id, arr) {
   for (let i = 0; i < arr.length; i++) {
     if (id === arr[i].id) {
-      let selectedPrice = arr[i].price;
-      let selectedService = arr[i].service;
+      selectedPrice = arr[i].price;
+      selectedService = arr[i].service;
       console.log(`updatePrice = ${selectedPrice} and updateService = ${selectedService}`)
     } else {
       console.log('input id did not match input arr.id')
@@ -58,12 +59,16 @@ function retrievePriceAndService (id, arr) {
 }
 
 // update array for servicesRequested
-function updatePricesRequested(price) {
-  
+function displayPricesRequested(price) {
+  displayArea.innerHTML = `
+    <h1> Price: ${price}</h1>
+  `
 }
 
-function updateServicesRequested(service) {
-
+function displayServicesRequested(service) {
+  displayArea.innerHTML = `
+    <h1> Service: ${service}</h1>
+  `
 }
 // update display with array contents
 
