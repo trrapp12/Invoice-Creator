@@ -16,6 +16,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   font-size: 16px;
+  padding-top: 2rem;
 }
 
 button {
@@ -42,15 +43,14 @@ button {
   padding: 2rem 0rem;
 }
 
-.container-master {
+.container-bottom-half {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 45%;
   background-color: #1F2937;
   margin: auto;
-  padding: 0rem 3rem;
+  padding: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -61,7 +61,11 @@ button {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 2rem;
+}
+
+.container-master {
+  width: 44%;
+  margin: auto;
 }
 
 .container-predisplay {
@@ -72,7 +76,7 @@ button {
 }
 
 .container-submit {
-
+  padding-bottom: 2rem;
 }
 
 .display {
@@ -115,5 +119,6 @@ h3 {
 }
 
 .submit {
-
+  background-color: #3A69D2;
+  color: white;
 }
