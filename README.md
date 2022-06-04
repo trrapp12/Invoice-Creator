@@ -3,7 +3,6 @@
  ---
 <br>
 
-https://user-images.githubusercontent.com/11747875/171572141-4bfc38f1-316e-4cfe-9846-125d8139c7a2.mp4
 
 <br>
 
