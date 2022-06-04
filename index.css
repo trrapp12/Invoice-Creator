@@ -77,6 +77,8 @@ button {
 
 .display {
   padding: 3rem 0rem 3rem 0rem;
+  border-bottom: solid 2px white;
+  margin-bottom: 2rem;
 }
 
 h1 {
@@ -94,12 +96,18 @@ h3 {
   font-size: 1.5rem;
 }
 
-.price {
-
+.price > .price-results {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .price-results {
   margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .service-results {

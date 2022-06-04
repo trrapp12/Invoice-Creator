@@ -74,8 +74,8 @@ function pushToArray (service, arr) {
   } else {
     arr.push(service);
     updatePrice(selectedPrice)
-    displayPricesRequested(selectedPrice);
     displayServicesRequested(selectedService);
+    displayPricesRequested(selectedPrice);
     console.log(servicesRequested)
   }
 
@@ -88,16 +88,25 @@ function updatePrice (price) {
 // update display with array contents
 function displayPricesRequested(price) {
 
-  displayArea.innerHTML += `<div class="price-results">
-    <h3 class="price-results"> Price: ${price}</h2>
-    </div>
-  `
+  // displayArea.innerHTML += `<div class="price-results">
+  //   <h3 class="price-results"> Price: ${price}</h2>
+  //   </div>
+  // `
+
+  displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
+  <h3 class="service-results"> Price: ${price}</h2>
+`) 
 }
 
 function displayServicesRequested(service) {
-  displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
-  <h3 class="service-results"> Service: ${service}</h2>
-`) 
+
+  displayArea.innerHTML += `<div class="price-results">
+  <h3 class="price-results"> Service: ${service}</h2>
+  </div>
+`
+//   displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
+//   <h3 class="service-results"> Service: ${service}</h2>
+// `) 
 }
 
 function displayTotalPrice () {
