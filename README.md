@@ -7,7 +7,7 @@ https://user-images.githubusercontent.com/11747875/171572141-4bfc38f1-316e-4cfe-
 
 <br>
 
-[![Button60](https://user-images.githubusercontent.com/11747875/144651679-dc423f76-a98a-456d-8ca2-d913f0b7df12.png)](https://trrapp12.github.io/bible-conversion-tool/)
+[![Button60](https://user-images.githubusercontent.com/11747875/144651679-dc423f76-a98a-456d-8ca2-d913f0b7df12.png)](https://trrapp12.github.io/Invoice-Creator/)
 
 <br>
 <br>
@@ -50,7 +50,7 @@ This is a simple conversion tool, but instead of imperial to metric I wanted to 
 ### Project published at: 
 
 
-[Bible Conversion Tool](https://trrapp12.github.io/bible-conversion-tool/)
+[Bible Conversion Tool](https://trrapp12.github.io/Invoice-Creator/)
 
 <br>
 <br>
