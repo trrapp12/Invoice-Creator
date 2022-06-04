@@ -1,18 +1,29 @@
 html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+  color: white;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   font-size: 16px;
+}
+
+button {
+  background-color: #D1D4F4;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
 
 .button-service {
@@ -20,19 +31,44 @@ body {
 }
 
 .container-button {
-
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 4rem;
 }
 
 .container-display {
-
+  padding: 2rem 0rem;
 }
 
 .container-master {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 45%;
+  background-color: #1F2937;
+  margin: auto;
+  padding: 0rem 3rem;
+  margin-bottom: 2rem;
 }
 
 .container-head {
+  background-color: #3A69D2;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
+.container-predisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 2px solid white;
 }
 
 .container-submit {
@@ -40,7 +76,7 @@ body {
 }
 
 .display {
-
+  padding: 3rem 0rem 3rem 0rem;
 }
 
 h1 {
@@ -60,6 +96,14 @@ h3 {
 
 .price {
 
+}
+
+.price-results {
+  margin-bottom: 1rem;
+}
+
+.service-results {
+  margin-bottom: 2rem;
 }
 
 .submit {

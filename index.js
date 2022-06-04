@@ -87,20 +87,22 @@ function updatePrice (price) {
 }
 // update display with array contents
 function displayPricesRequested(price) {
-  displayArea.innerHTML += `
-    <h2> Price: ${price}</h2>
+
+  displayArea.innerHTML += `<div class="price-results">
+    <h3 class="price-results"> Price: ${price}</h2>
+    </div>
   `
 }
 
 function displayServicesRequested(service) {
-  displayArea.innerHTML += `
-    <h2> Service: ${service}</h2>
-  `
+  displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
+  <h3 class="service-results"> Service: ${service}</h2>
+`) 
 }
 
 function displayTotalPrice () {
   priceContainer.innerHTML = `
-    <h2>Grand Total: ${priceTotal}</h2>
+    <h3 class="price-results">Grand Total: ${priceTotal}</h2>
   `
 }
 // remove contents from array
