@@ -16,7 +16,6 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  padding-top: 2rem;
 }
 
 button {
@@ -64,8 +63,10 @@ button {
 }
 
 .container-master {
-  width: 44%;
+  padding: 4rem;
+  width: 60%;
   margin: auto;
+  transition: 500ms;
 }
 
 .container-predisplay {
@@ -121,4 +122,11 @@ h3 {
 .submit {
   background-color: #3A69D2;
   color: white;
+}
+
+@media screen and (max-width: 1050px) {
+  .container-master {
+    width: 100%;
+    padding: 0rem;
+  }
 }
