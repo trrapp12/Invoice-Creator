@@ -31,6 +31,7 @@
   const buttonWeeds = document.getElementById("pull-weeds");
   const yesModal = document.getElementById('yes')
   const noModal = document.getElementById('no')
+  const modalCloseBtn = document.getElementById('modal-close')
 
   const buttonContainer = document.getElementById('container-button');
   const priceContainer = document.getElementById('display-price')
@@ -55,6 +56,10 @@ noModal.addEventListener('click', () => {
   noToWarning()
 })
 
+modalCloseBtn.addEventListener('click', () => {
+  toggleModalDisplay();
+})
+
 // figure out which service and price are associated with each
 function retrievePriceAndService (id, arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -77,19 +82,14 @@ function initializeInvoice() {
 function toggleModalDisplay() {
   console.log('toggleModalDisplay fired')
   if (modal.style === 'none') {
-    modal.style = "flex"
+    modal.style.display = "flex"
   } else {
-    modal.style = "none"
+    modal.style.display = "none"
   }
 }
 
-function yesToWarning(service, arr) {
-  arr.push(service);
-  updatePrice(selectedPrice)
-  displayServicesRequested(selectedService);
-  displayPricesRequested(selectedPrice);
-  toggleModalDisplay()
-  console.log(servicesRequested)
+function yesToWarning() {
+
 }
 
 function noToWarning() {
