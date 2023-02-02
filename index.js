@@ -25,10 +25,6 @@
   let updatedPrice;
   let updateService;
 
-
-  const buttonCar = document.getElementById("car-wash");
-  const buttonLawn = document.getElementById("lawn-mowed");
-  const buttonWeeds = document.getElementById("pull-weeds");
   const yesModal = document.getElementById('yes')
   const noModal = document.getElementById('no')
   const modalCloseBtn = document.getElementById('modal-close')
@@ -41,8 +37,7 @@
 
   buttonContainer.addEventListener('click', (event) => {
     let targetId = event.target.id;
-    console.log(targetId)
-
+    // console.log(targetId)
     retrievePriceAndService(targetId, servicesAvailable);
     pushToArray(selectedService, servicesRequested);
     displayTotalPrice();
@@ -57,7 +52,7 @@ noModal.addEventListener('click', () => {
 })
 
 modalCloseBtn.addEventListener('click', () => {
-  toggleModalDisplay();
+  toggleModal();
 })
 
 // figure out which service and price are associated with each
@@ -66,9 +61,9 @@ function retrievePriceAndService (id, arr) {
     if (id === arr[i].id) {
       selectedPrice = arr[i].price;
       selectedService = arr[i].service;
-      console.log(`updatePrice = ${selectedPrice} and updateService = ${selectedService}`)
+      // console.log(`updatePrice = ${selectedPrice} and updateService = ${selectedService}`)
     } else {
-      console.log('input id did not match input arr.id')
+      console.log('EXITED retrievePriceAndService: input id did not match input arr.id')
     }
   }
 }
@@ -79,40 +74,48 @@ function initializeInvoice() {
   priceTotal = 0;
 }
 
-function toggleModalDisplay() {
-  console.log('toggleModalDisplay fired')
-  if (modal.style === 'none') {
+function toggleModal() {
+  console.log('toggleModal fired')
+  console.log(modal.style.display)
+  if (modal.style.display === '' || modal.style.display === 'none') {
     modal.style.display = "flex"
   } else {
     modal.style.display = "none"
   }
 }
 
-function yesToWarning() {
-
+function yesToWarning(service, arr) {
+  console.log(arr, service)
+  arr.push(service);
+  updatePrice(selectedPrice)
+  displayServicesRequested(selectedService);
+  displayPricesRequested(selectedPrice);
+  console.log(servicesRequested)
 }
 
 function noToWarning() {
-  toggleModalDisplay()
+  toggleModal()
 }
 
 // update array for servicesRequested
 function pushToArray (service, arr) {
+
   if (arr.includes(service)) {
-    toggleModalDisplay()
+    console.log('arr.includes(service) true')
+    toggleModal()
   } else {
     arr.push(service);
     updatePrice(selectedPrice)
     displayServicesRequested(selectedService);
     displayPricesRequested(selectedPrice);
-    console.log(servicesRequested)
+    // console.log(servicesRequested)
   }
 
 }
 
 function updatePrice (price) {
     priceTotal += price;
-    console.log(priceTotal)
+    // console.log(priceTotal)
 }
 // update display with array contents
 function displayPricesRequested(price) {
