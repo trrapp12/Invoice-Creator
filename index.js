@@ -1,6 +1,6 @@
 (() => {
   window.addEventListener('load', () => {
-    // create variables
+
   let servicesRequested = [];
   let priceTotal = 0;
   const servicesAvailable = [
@@ -26,16 +26,16 @@
   let updateService;
 
 
-  // grab buttons
   const buttonCar = document.getElementById("car-wash");
   const buttonLawn = document.getElementById("lawn-mowed");
   const buttonWeeds = document.getElementById("pull-weeds");
+  const yesModal = document.getElementById('yes')
+  const noModal = document.getElementById('no')
 
-  // grab containers
   const buttonContainer = document.getElementById('container-button');
   const priceContainer = document.getElementById('display-price')
+  const modal = document.getElementById('modal')
 
-  // get display area
   const displayArea = document.getElementById('display')
 
   buttonContainer.addEventListener('click', (event) => {
@@ -47,7 +47,13 @@
     displayTotalPrice();
   })
 
-// tell which button was pushed(done with listener)
+yesModal.addEventListener('click', () => {
+  yesToWarning();
+})
+
+noModal.addEventListener('click', () => {
+  noToWarning()
+})
 
 // figure out which service and price are associated with each
 function retrievePriceAndService (id, arr) {
@@ -67,10 +73,33 @@ function initializeInvoice() {
   servicesRequested = [];
   priceTotal = 0;
 }
+
+function toggleModalDisplay() {
+  console.log('toggleModalDisplay fired')
+  if (modal.style === 'none') {
+    modal.style = "flex"
+  } else {
+    modal.style = "none"
+  }
+}
+
+function yesToWarning(service, arr) {
+  arr.push(service);
+  updatePrice(selectedPrice)
+  displayServicesRequested(selectedService);
+  displayPricesRequested(selectedPrice);
+  toggleModalDisplay()
+  console.log(servicesRequested)
+}
+
+function noToWarning() {
+  toggleModalDisplay()
+}
+
 // update array for servicesRequested
 function pushToArray (service, arr) {
   if (arr.includes(service)) {
-    console.log('service already included in the list')
+    toggleModalDisplay()
   } else {
     arr.push(service);
     updatePrice(selectedPrice)
@@ -87,12 +116,6 @@ function updatePrice (price) {
 }
 // update display with array contents
 function displayPricesRequested(price) {
-
-  // displayArea.innerHTML += `<div class="price-results">
-  //   <h3 class="price-results"> Price: ${price}</h2>
-  //   </div>
-  // `
-
   displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
   <h3 class="service-results"> Price: ${price}</h2>
 `) 
@@ -104,9 +127,6 @@ function displayServicesRequested(service) {
   <h3 class="price-results"> Service: ${service}</h2>
   </div>
 `
-//   displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
-//   <h3 class="service-results"> Service: ${service}</h2>
-// `) 
 }
 
 function displayTotalPrice () {
@@ -114,9 +134,5 @@ function displayTotalPrice () {
     <h3 class="price-results">Grand Total: ${priceTotal}</h2>
   `
 }
-// remove contents from array
-
-// update display
-
   })
 })()

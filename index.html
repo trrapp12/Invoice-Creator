@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container-master">
-      <div class="container-head">
-        <h1>Invoice Creator</h1>
-        <p>Thanks for choosing QUADRStalkr</p>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-master">
+    <div class="container-head">
+      <h1>Invoice Creator</h1>
+      <p>Thanks for choosing QUADRStalkr</p>
+    </div>
+    <div class="container-bottom-half">
+      <div class="container-button" id="container-button">
+        <button class="button-service" id="car-wash">Car Wash: $10</button>
+        <button class="button-service" id="lawn-mowed">Mow Lawn: $20</button>
+        <button class="button-service" id="pull-weeds">Pull Weeds: $30</button>
       </div>
-      <div class="container-bottom-half">
-        <div class="container-button" id="container-button">
-            <button class="button-service" id="car-wash">Car Wash: $10</button>
-            <button class="button-service" id="lawn-mowed">Mow Lawn: $20</button>
-            <button class="button-service" id="pull-weeds">Pull Weeds: $30</button>
-          </div>
-        <div class="container-predisplay">
-          <p>Task</p>
-          <p>Total Amount</p>
-        </div>
-        <div class="container-display">
-          <div class="display" id="display"></div>
-          <div class="price" id="display-price"></div>
-        </div>
-        <div class="container-submit">
-          <button class="submit" id="submit">Send Invoice</button>
+      <div class="container-predisplay">
+        <p>Task</p>
+        <p>Total Amount</p>
+      </div>
+      <div class="container-display">
+        <div class="display" id="display"></div>
+        <div class="price" id="display-price"></div>
+      </div>
+      <div class="container-submit">
+        <button class="submit" id="submit">Send Invoice</button>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="modal--container">
+        <h1>Do you REALLY want to purchase more than one of these services?</h1>
+        <div class="modal--button-container">
+          <button class="button-service" id="yes">Yes</button><button class="button-service" id="no">No</button>
         </div>
       </div>
-    </div>    
-    <script src="index.js"></script>
-  </body>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
