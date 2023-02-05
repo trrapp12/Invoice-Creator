@@ -22,8 +22,8 @@
   ];
   let selectedPrice;
   let selectedService;
-  let updatedPrice;
-  let updateService;
+  let tempStateService = [];
+  let tempStateArr = [];
 
   const yesModal = document.getElementById('yes')
   const noModal = document.getElementById('no')
@@ -74,6 +74,19 @@ function initializeInvoice() {
   priceTotal = 0;
 }
 
+function setTempState (service, arr) {
+  console.log('setTempState fired')
+  console.log(`service is ${service} and arr is ${arr}`)
+  tempStateService.push(service);
+  tempStateArr.push(arr);
+  console.log(`ending setTempState, tempStatearr is ${tempStateArr} and tempStateService is ${tempStateService}`)
+}
+
+function clearTempState () {
+  tempStateService = [];
+  tempStateArr = [];
+}
+
 function toggleModal() {
   console.log('toggleModal fired')
   console.log(modal.style.display)
@@ -84,9 +97,12 @@ function toggleModal() {
   }
 }
 
-function yesToWarning(service, arr) {
-  console.log(arr, service)
-  arr.push(service);
+function yesToWarning() {
+  console.log('tempStateService and tempStateArr are:')
+  console.log(tempStateService)
+  console.log(tempStateArr)
+  arr.push(tempStateService, tempStateArr);
+  clearTempState();
   updatePrice(selectedPrice)
   displayServicesRequested(selectedService);
   displayPricesRequested(selectedPrice);
@@ -102,6 +118,8 @@ function pushToArray (service, arr) {
 
   if (arr.includes(service)) {
     console.log('arr.includes(service) true')
+    console.log(`before temp state fires service is ${service} and arr is ${selectedPrice}`)
+    setTempState(service, arr)
     toggleModal()
   } else {
     arr.push(service);
