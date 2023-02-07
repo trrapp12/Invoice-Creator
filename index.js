@@ -22,74 +22,94 @@
   ];
   let selectedPrice;
   let selectedService;
-  let tempStateService = [];
-  let tempStateArr = [];
 
   const yesModal = document.getElementById('yes')
   const noModal = document.getElementById('no')
   const modalCloseBtn = document.getElementById('modal-close')
-
   const buttonContainer = document.getElementById('container-button');
   const priceContainer = document.getElementById('display-price')
   const modal = document.getElementById('modal')
-
   const displayArea = document.getElementById('display')
+
+  yesModal.addEventListener('click', () => {
+    yesToWarning(selectedPrice);
+  })
+  
+  noModal.addEventListener('click', () => {
+    noToWarning(selectedPrice);
+  })
+  
+  modalCloseBtn.addEventListener('click', () => {
+    noToWarning(selectedPrice, serviceRequested);
+  })
 
   buttonContainer.addEventListener('click', (event) => {
     let targetId = event.target.id;
-    // console.log(targetId)
     retrievePriceAndService(targetId, servicesAvailable);
     pushToArray(selectedService, servicesRequested);
+    console.log(servicesRequested)
+    console.log(selectedPrice)
     displayTotalPrice();
   })
 
-yesModal.addEventListener('click', () => {
-  yesToWarning();
-})
-
-noModal.addEventListener('click', () => {
-  noToWarning()
-})
-
-modalCloseBtn.addEventListener('click', () => {
-  toggleModal();
-})
-
-// figure out which service and price are associated with each
-function retrievePriceAndService (id, arr) {
-  for (let i = 0; i < arr.length; i++) {
-    if (id === arr[i].id) {
-      selectedPrice = arr[i].price;
-      selectedService = arr[i].service;
-      // console.log(`updatePrice = ${selectedPrice} and updateService = ${selectedService}`)
-    } else {
-      console.log('EXITED retrievePriceAndService: input id did not match input arr.id')
+  function retrievePriceAndService (id, arr) {
+    for (let i = 0; i < arr.length; i++) {
+      if (id === arr[i].id) {
+        selectedPrice = arr[i].price;
+        selectedService = arr[i].service;
+      } else {
+        console.log('EXITED retrievePriceAndService: input id did not match input arr.id')
+      }
     }
   }
-}
-// initial zeroed balance and array
 
-function initializeInvoice() {
-  servicesRequested = [];
-  priceTotal = 0;
+  function pushToArray (service, arr) {
+
+      updatePrice(selectedPrice);
+      displayServicesRequested(selectedService);
+      displayPricesRequested(selectedPrice);
+    if (arr.includes(service)) {
+      arr.push(service);
+      console.log('arr.includes(service) true')
+      toggleModal()
+      console.log(`second item selected: priceTotal is ${priceTotal}`)
+    } else {
+      arr.push(service);
+      console.log('no need to trigger modal')
+    }
+  
+  }
+
+  function updatePrice (price) {
+    priceTotal += price;
 }
 
-function setTempState (service, arr) {
-  console.log('setTempState fired')
-  console.log(`service is ${service} and arr is ${arr}`)
-  tempStateService.push(service);
-  tempStateArr.push(arr);
-  console.log(`ending setTempState, tempStatearr is ${tempStateArr} and tempStateService is ${tempStateService}`)
+function subtractPrice(price) {
+  console.log(`price in subtractPrice is ${price} and priceTotal is ${priceTotal}`)
+  priceTotal -= price;
+  console.log(`price in subtractPrice is ${price} and priceTotal is ${priceTotal}`)
 }
 
-function clearTempState () {
-  tempStateService = [];
-  tempStateArr = [];
+function displayServicesRequested(service) {
+  displayArea.innerHTML += `<div class="price-results">
+  <h3 class="price-results"> Service: ${service}</h2>
+  </div>
+`
+}
+
+function displayPricesRequested(price) {
+  displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
+  <h3 class="service-results"> Price: ${price}</h2>
+`) 
+}
+
+function displayTotalPrice () {
+  priceContainer.innerHTML = `
+    <h3 class="price-results">Grand Total: ${priceTotal}</h2>
+  `
 }
 
 function toggleModal() {
-  console.log('toggleModal fired')
-  console.log(modal.style.display)
   if (modal.style.display === '' || modal.style.display === 'none') {
     modal.style.display = "flex"
   } else {
@@ -98,62 +118,22 @@ function toggleModal() {
 }
 
 function yesToWarning() {
-  console.log('tempStateService and tempStateArr are:')
-  console.log(tempStateService)
-  console.log(tempStateArr)
-  arr.push(tempStateService, tempStateArr);
-  clearTempState();
-  updatePrice(selectedPrice)
-  displayServicesRequested(selectedService);
-  displayPricesRequested(selectedPrice);
-  console.log(servicesRequested)
-}
-
-function noToWarning() {
   toggleModal()
 }
 
-// update array for servicesRequested
-function pushToArray (service, arr) {
-
-  if (arr.includes(service)) {
-    console.log('arr.includes(service) true')
-    console.log(`before temp state fires service is ${service} and arr is ${selectedPrice}`)
-    setTempState(service, arr)
-    toggleModal()
-  } else {
-    arr.push(service);
-    updatePrice(selectedPrice)
-    displayServicesRequested(selectedService);
-    displayPricesRequested(selectedPrice);
-    // console.log(servicesRequested)
-  }
-
+function noToWarning(selectedPrice, serviceRequested) {
+  console.log('no to warning');
+  console.log(servicesRequested);
+  subtractPrice(selectedPrice)
+  removeItemFromOrder();
+  displayTotalPrice();
+  toggleModal();
 }
 
-function updatePrice (price) {
-    priceTotal += price;
-    // console.log(priceTotal)
-}
-// update display with array contents
-function displayPricesRequested(price) {
-  displayArea.childNodes[displayArea.childNodes.length - 2].insertAdjacentHTML('beforeend', `
-  <h3 class="service-results"> Price: ${price}</h2>
-`) 
+function removeItemFromOrder() {
+  displayArea.removeChild(displayArea.lastChild);
+  displayArea.removeChild(displayArea.lastChild);
 }
 
-function displayServicesRequested(service) {
-
-  displayArea.innerHTML += `<div class="price-results">
-  <h3 class="price-results"> Service: ${service}</h2>
-  </div>
-`
-}
-
-function displayTotalPrice () {
-  priceContainer.innerHTML = `
-    <h3 class="price-results">Grand Total: ${priceTotal}</h2>
-  `
-}
   })
 })()
