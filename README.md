@@ -73,6 +73,7 @@ Specific things I learned included:
 
 Contributors: Trevor Rapp
 
+Original project was part of the <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course </a>.
 
 ---
 
