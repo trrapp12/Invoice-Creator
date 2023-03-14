@@ -61,7 +61,6 @@ A simple invoice creator built with Vanilla JavaScript, HTML and CSS.
 
 Contributors: Trevor Rapp
 
-*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 ---
 
