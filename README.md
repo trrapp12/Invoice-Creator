@@ -57,6 +57,15 @@ A simple invoice creator built with Vanilla JavaScript, HTML and CSS.
 
 ---
 
+### CHALLENGES I HAVE OVERCOME:
+
+Specific things I learned included: 
+
+- [x] I expanded on the original project by creating a modal that alerts you in case you put the same invoice more than once
+- [x] Instead of only being able to order one action only once, I made it so you can now order it multiple times if you like
+
+---
+
 ### CREDITS: 
 
 Contributors: Trevor Rapp
