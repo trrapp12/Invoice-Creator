@@ -24,11 +24,12 @@ https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-
 
 ### Description:
 
+	
+> "Is that a page from the dastardly villain’s diary?” Maldynado asked. “One carelessly dropped that conveniently reveals the secret to destroying these > vile artifacts?” “It’s an invoice.” “Villains get bills?"
+> 
+> — Lindsay Buroker (Dark Currents (The Emperor's Edge, #2))
 
-A simple invoice creator. 
-
-<br>
-<br>
+A simple invoice creator built with Vanilla JavaScript, HTML and CSS. 
 
 ---
 
@@ -54,22 +55,16 @@ A simple invoice creator.
 
 - [X] Use of event listeners on window object to make sure elements are loaded before adding further listeners.
 
-<br>
-<br>
+---
+
+### CREDITS: 
+
+Contributors: Trevor Rapp
+
+*This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).*
 
 ---
 
-### Project published at: 
+### YOU CAN FIND ME AT:
 
-
-[Bible Conversion Tool](https://trrapp12.github.io/Invoice-Creator/)
-
-<br>
-<br>
-
----
-
-### More Information:
-
-
-\**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037) or return to my [Github](https://github.com/trrapp12)*
+\**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037), or return to my [Github](https://github.com/trrapp12)*
