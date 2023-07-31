@@ -26,9 +26,9 @@ https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-
 
 	
 > "Is that a page from the dastardly villain’s diary?” Maldynado asked. <br>
-> “One carelessly dropped that conveniently reveals the secret to destroying these vile artifacts?”
-> “It’s an invoice.”
-> “Villains get bills?"
+> “One carelessly dropped that conveniently reveals the secret to destroying these vile artifacts?”<br>
+> “It’s an invoice.”<br>
+> “Villains get bills?"<br>
 > 
 > — Lindsay Buroker (Dark Currents (The Emperor's Edge, #2))
 
