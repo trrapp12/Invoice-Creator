@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-
 > “It’s an invoice.”<br>
 > “Villains get bills?"<br>
 > 
-> — Lindsay Buroker (Dark Currents (The Emperor's Edge, #2))
+> — Lindsay Buroker *Dark Currents (The Emperor's Edge, #2)*
 
 A simple invoice creator built with Vanilla JavaScript, HTML and CSS. 
 
