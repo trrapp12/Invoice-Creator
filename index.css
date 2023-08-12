@@ -87,7 +87,7 @@ button {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2vw;
   font-weight: 700;
 }
 
@@ -151,7 +151,7 @@ h3 {
   border: 10px rgba(255, 255, 255, .7) double;
   border-radius: 10px;
   display: flex;
-  filter: drop-shadow(0 0 0.75rem #85600B);
+  filter: drop-shadow(0 0 0.75rem #3A69D290);
   flex-direction: column;
   height: 40vh;
   justify-content: space-evenly;
