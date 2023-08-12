@@ -151,7 +151,7 @@ h3 {
   border: 10px rgba(255, 255, 255, .7) double;
   border-radius: 10px;
   display: flex;
-  filter: drop-shadow(0 0 0.75rem #3A69D290);
+  filter: drop-shadow(0 0 0.75rem #3A69D270);
   flex-direction: column;
   height: 40vh;
   justify-content: space-evenly;
