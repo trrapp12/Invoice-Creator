@@ -1,16 +1,24 @@
 # INVOICE CREATOR
- 
+
+ <br/>
+
+#### Contributors: Trevor Rapp
+
+*All work is completely my own. This project completed as a solo project in the Scrimba [Front End Developer Career Path](https://scrimba.com/learn/frontend), meaning specifications for what the project should be able to do were given, but no help or instruction was provided.*
+
+<br/>
+
  ---
-<br>
-
-https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-b80f-610b98e52ac1.mp4
-
+ 
 <br>
 
 [![Button60](https://user-images.githubusercontent.com/11747875/144651679-dc423f76-a98a-456d-8ca2-d913f0b7df12.png)](https://trrapp12.github.io/Invoice-Creator/)
 
 <br>
 
+https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-b80f-610b98e52ac1.mp4
+
+<br>
 
 ---
 
@@ -32,11 +40,21 @@ https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-
 > 
 > — Lindsay Buroker *Dark Currents (The Emperor's Edge, #2)*
 
-A simple invoice creator built with Vanilla JavaScript, HTML and CSS. 
+*This project is a simple invoice creator built with Vanilla JavaScript, HTML and CSS.* 
+
+<br/>
 
 ---
 
-### PROJECT DEMONSTRATES THE FOLLOWING:
+### QUICKSTART GUIDE
+
+To use the app simply click on the ```View Project``` button or visit <a href="https://trrapp12.github.io/password-maker/">https://trrapp12.github.io/password-maker/</a>. 
+
+<br/>
+
+---
+
+### PROJECT DEMONSTRATES
 
 - [X] Array to hold variables.
 
