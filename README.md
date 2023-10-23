@@ -48,7 +48,7 @@ https://user-images.githubusercontent.com/11747875/217130403-c115accc-791a-46e5-
 
 ### QUICKSTART GUIDE
 
-To use the app simply click on the ```View Project``` button or visit <a href="https://trrapp12.github.io/password-maker/">https://trrapp12.github.io/password-maker/</a>. 
+To use the app simply click on the ```View Project``` button or visit <a href="https://trrapp12.github.io/Invoice-Creator/">https://trrapp12.github.io/Invoice-Creator/</a>. 
 
 <br/>
 
@@ -76,9 +76,11 @@ To use the app simply click on the ```View Project``` button or visit <a href="h
 
 - [X] Use of event listeners on window object to make sure elements are loaded before adding further listeners.
 
+<br/>
+
 ---
 
-### CHALLENGES I HAVE OVERCOME:
+### CHALLENGES I OVERCAME:
 
 Specific things I learned included: 
 
@@ -88,16 +90,26 @@ Specific things I learned included:
 
 - [x] Made it so items can be subtracted from the invoice
 
----
-
-### CREDITS: 
-
-Contributors: Trevor Rapp
-
-Original project was part of the <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course </a>.
+<br/>
 
 ---
+
+### MY OWN PERSONAL CONTRIBUTIONS INCLUDED:
+
+- [X] all work is completely my own.  The only directions were user stories the assignment needed to complete.
+
+<br/>
+
+---
+
+### ATTRIBUTIONS: 
+
+Project created by TREVOR RAPP
+
+* Original project idea was part of the <a href="https://scrimba.com/learn/frontend"> Scrimba's Front End Development Course.</a>
+
+<br/>
 
 ### YOU CAN FIND ME AT:
 
-\**For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037), or return to my [Github](https://github.com/trrapp12)*
+*For more information see my [LinkedIn](https://www.linkedin.com/in/trevor-rapp-042a1037), or return to my [Github](https://github.com/trrapp12)*
